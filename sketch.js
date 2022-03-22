@@ -1,4 +1,5 @@
 let x1, x2, x3, x4, y2, y3
+var pedals = 30;
 
 function setup() {
   // canvas configurations
@@ -10,51 +11,43 @@ function setup() {
   translate(width/2, height/2);
   circle(0,0,50);
 
+  let ang = 360/pedals ;
+
   x4 = random(230,245);
   x3 = random(210,230);
   x2 = random(190,215);
   x1 = random(185,205);
-  y2 = random(5,100);
-  y3 = random(5,100);
+  y2 = random(5,50);
+  y3 = random(5,50);
 
-  beginShape();
-    curveVertex(x1, 0);
-    curveVertex(x1, 0);
-    curveVertex(x2, y2);
-    curveVertex(x3, y3);
-    curveVertex(x4, 0);
-    curveVertex(x4, 0);
-    endShape();
-  // opposite shape
-  beginShape();
-    curveVertex(x1, 0);
-    curveVertex(x1, 0);
-    curveVertex(x2, -y2);
-    curveVertex(x3, -y3);
-    curveVertex(x4, 0);
-    curveVertex(x4, 0);
-    endShape();
-
-    // only the canvas rotates
-    rotate(30);
-
+  for (let i = 0; i < pedals; i++) {
+    noStroke();
     beginShape();
-    curveVertex(x1, 0);
-    curveVertex(x1, 0);
-    curveVertex(x2, y2);
-    curveVertex(x3, y3);
-    curveVertex(x4, 0);
-    curveVertex(x4, 0);
-    endShape();
-  // opposite shape
-  beginShape();
-    curveVertex(x1, 0);
-    curveVertex(x1, 0);
-    curveVertex(x2, -y2);
-    curveVertex(x3, -y3);
-    curveVertex(x4, 0);
-    curveVertex(x4, 0);
-    endShape();
+      curveVertex(x1, 0);
+      curveVertex(x1, 0);
+      curveVertex(x2, y2);
+      curveVertex(x3, y3);
+      curveVertex(x4, 0);
+      curveVertex(x4, 0);
+      endShape();
+
+    // opposite shape
+    beginShape();
+      curveVertex(x1, 0);
+      curveVertex(x1, 0);
+      curveVertex(x2, -y2);
+      curveVertex(x3, -y3);
+      curveVertex(x4, 0);
+      curveVertex(x4, 0);
+      endShape();
+
+      stroke(365);
+      strokeWeight(2);
+      line(x1,0,x4,0);
+
+      // only the canvas rotates
+      rotate(ang);
+  }
 }
 
 function draw() {
