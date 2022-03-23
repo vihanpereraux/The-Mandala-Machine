@@ -71,3 +71,11 @@ function setup() {
 }
 
 function draw() {}
+var ID = Math.random().toString(36).slice(2);
+function keyPressed() {
+  //if the key is a s
+  if (key == "s") {
+    //save out to a file
+    save(ID.toUpperCase() + ".jpg");
+  }
+}
