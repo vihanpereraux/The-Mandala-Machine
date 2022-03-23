@@ -1,5 +1,5 @@
 let x1, x2, x3, x4, y2, y3
-var pedals = 40;
+var pedals = 45;
 
 function setup() {
   // canvas configurations
@@ -14,21 +14,21 @@ function setup() {
 
   let ang = 360/pedals ;
 
-  let hue = random(256);
-  let sat = random(70, 100);
-  let brgt = random(70, 100);
-
   let removal = 40;
 
   for (let i = 0; i < 5; i++) {
     
-    x4 = random(230-i*removal,245-i*removal);
+    x4 = random(230-i*removal,250-i*removal);
     x3 = random(210-i*removal,230-i*removal);
     x2 = random(190-i*removal,215-i*removal);
     x1 = random(185-i*removal,205-i*removal);
-    let maxX2 = x2*tan(ang*0.6);
+    let maxX2 = x2*tan(ang*0.5);
     y2 = random(5, maxX2); // preventing overlapping
     y3 = random(5, maxX2); // // preventing overlapping
+
+    let hue = random(256);
+    let sat = random(70, 100);
+    let brgt = random(70, 100);
 
     for (let i = 0; i < pedals; i++) {
       
