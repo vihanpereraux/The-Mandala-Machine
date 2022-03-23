@@ -1,5 +1,5 @@
 let x1, x2, x3, x4, y2, y3;
-var symmetries = 45;
+var symmetries = 5;
 
 function setup() {
   // canvas configurations
@@ -8,16 +8,21 @@ function setup() {
   createCanvas(canvasWidth, canvasHeight);
   background(0);
   angleMode(DEGREES); // canvas configs updated
-  colorMode(HSB, 360, 100, 100);
-
+  colorMode(
+    RGB,
+    random(1, 255),
+    random(1, 255),
+    random(1, 255),
+    random(0.1, 1)
+  );
   // brings the point to the center
   translate(width / 2, height / 2);
   //circle(0,0,50);
 
-  let ang = 360 / symmetries;
+  let ang = random(360) / symmetries;
 
-  let removal = 15;
-  let layer = 80;
+  let removal = 55;
+  let layer = 555;
 
   for (let i = 0; i < layer; i++) {
     x4 = random(230 + 50 - i * removal, 250 + 50 - i * removal);
@@ -28,12 +33,13 @@ function setup() {
     y2 = random(5, maxX2); // preventing overlapping
     y3 = random(5, maxX2); // // preventing overlapping
 
-    let hue = random(256);
-    let sat = random(70, 100);
-    let brgt = random(70, 100);
+    let hue = random(1, 240);
+    let sat = random(0, 100);
+    let brgt = random(0, 100);
+    let opacity = random(0.1, 1);
 
     for (let i = 0; i < symmetries; i++) {
-      fill(hue, sat, brgt);
+      fill(hue, sat, brgt, opacity);
       stroke(0, 0, 0);
       beginShape();
       curveVertex(x1, 0);
@@ -54,7 +60,7 @@ function setup() {
       curveVertex(x4, 0);
       endShape();
 
-      stroke(hue, sat, brgt);
+      stroke(hue, sat, brgt, opacity);
       strokeWeight(2);
       line(x1 + 3, 0, x4 - 4, 0);
 
