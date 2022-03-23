@@ -76,6 +76,6 @@ function keyPressed() {
   //if the key is a s
   if (key == "s") {
     //save out to a file
-    save(ID.toUpperCase() + ".jpg");
+    save("MDL" + ID.toUpperCase() + ".jpg");
   }
 }
