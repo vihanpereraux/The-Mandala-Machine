@@ -3,8 +3,8 @@ var symmetries = 45;
 
 function setup() {
   // canvas configurations
-  let canvasWidth = 2048;
-  let canvasHeight = 2048;
+  let canvasWidth = 2048; //changeable canvas width
+  let canvasHeight = 2048; //changeable canvas height
   createCanvas(canvasWidth, canvasHeight);
   background(0);
   angleMode(DEGREES); // canvas configs updated
