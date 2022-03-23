@@ -1,9 +1,11 @@
 let x1, x2, x3, x4, y2, y3;
-var symmetries = 11;
+var symmetries = 45;
 
 function setup() {
   // canvas configurations
-  createCanvas(windowWidth, windowHeight);
+  let canvasWidth = 2048;
+  let canvasHeight = 2048;
+  createCanvas(canvasWidth, canvasHeight);
   background(0);
   angleMode(DEGREES); // canvas configs updated
   colorMode(HSB, 360, 100, 100);
@@ -14,8 +16,8 @@ function setup() {
 
   let ang = 360 / symmetries;
 
-  let removal = 35;
-  let layer = 11;
+  let removal = 15;
+  let layer = 80;
 
   for (let i = 0; i < layer; i++) {
     x4 = random(230 + 50 - i * removal, 250 + 50 - i * removal);
