@@ -22,7 +22,7 @@ function draw() {
 
   let removal = 40;
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < localStorage.getItem('numOfRounds'); i++) {
     
     x4 = random(230-i*removal,250-i*removal);
     x3 = random(210-i*removal,230-i*removal);

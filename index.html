@@ -25,29 +25,33 @@
     <div class="container">
       <div class="row">
         
+        <!-- number of petals -->
         <div class="col-3 col-md-3 col-lg-3">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Petals</label>
-            <input type="text" class="form-control" id="petals-count" aria-describedby="emailHelp">
+            <input type="number" class="form-control" id="petals-count" aria-describedby="emailHelp">
           </div>
         </div>
 
+        <!-- removal amount -->
         <div class="col-3 col-md-3 col-lg-3">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Removal</label>
-            <input type="text" class="form-control" id="removal-ammount" aria-describedby="emailHelp">
+            <input type="number" class="form-control" id="removal-ammount" aria-describedby="emailHelp">
           </div>
         </div>
 
+        <!-- number of rounds -->
         <div class="col-3 col-md-3 col-lg-3">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Rounds</label>
-            <input type="text" class="form-control" id="num-of-rounds" aria-describedby="emailHelp">
+            <input type="number" class="form-control" id="num-of-rounds" aria-describedby="emailHelp">
           </div>
         </div>
 
         <div class="col-3 col-md-3 col-lg-3 my-auto">
-          <a class="btn w-100 btn-primary" onclick="generateArt()">Generate</a>
+          <a class="btn btn-primary" onclick="setData()">Set Data</a>
+          <a class="btn btn-primary" onclick="generateArt()">Generate</a>
         </div>
 
       </div>
@@ -61,6 +65,7 @@
     crossorigin="anonymous"></script>
 
   <!-- Custom scripts -->
+  <script src="data.js"></script>
   <script src="sketch.js"></script>
 
 </body>
