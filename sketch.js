@@ -1,10 +1,16 @@
 let x1, x2, x3, x4, y2, y3
-var pedals = 45;
+var petals = 45;
 
 function setup() {
   // canvas configurations
   createCanvas(windowWidth, windowHeight);
   background(0);
+  noLoop();
+}
+
+
+// Configs relate to mandala art styles
+function draw() {
   angleMode(DEGREES); // canvas configs updated
   colorMode(HSB, 360, 100, 100);
 
@@ -12,7 +18,7 @@ function setup() {
   translate(width/2, height/2);
   //circle(0,0,50);
 
-  let ang = 360/pedals ;
+  let ang = 360/petals ;
 
   let removal = 40;
 
@@ -30,7 +36,7 @@ function setup() {
     let sat = random(70, 100);
     let brgt = random(70, 100);
 
-    for (let i = 0; i < pedals; i++) {
+    for (let i = 0; i < petals; i++) {
       
       fill(hue, sat, brgt);
       stroke(0,0,0);
@@ -63,6 +69,12 @@ function setup() {
   }
 }
 
-function draw() {
-  
+
+// Background clearence and key pressed triggers
+function keyPressed() {
+  clear();
+  background(0)
+  if (keyCode === 13) {
+    redraw();
+  }
 }

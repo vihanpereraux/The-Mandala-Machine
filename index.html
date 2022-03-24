@@ -1,18 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mandala Art Machine</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Mandala Art Machine</title>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+  <!-- Bootstrap v5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  <!-- Cusotm styles -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Controllers -->
+  <div id="controllers">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-3 col-md-3 col-lg-3">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Petals</label>
+            <input type="text" class="form-control" id="petals-count" aria-describedby="emailHelp">
+          </div>
+        </div>
+
+        <div class="col-3 col-md-3 col-lg-3">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Removal</label>
+            <input type="text" class="form-control" id="removal-ammount" aria-describedby="emailHelp">
+          </div>
+        </div>
+
+        <div class="col-3 col-md-3 col-lg-3">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Rounds</label>
+            <input type="text" class="form-control" id="num-of-rounds" aria-describedby="emailHelp">
+          </div>
+        </div>
+
+        <div class="col-3 col-md-3 col-lg-3 my-auto">
+          <a class="btn w-100 btn-primary" href="">Generate</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap v5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom scripts -->
+  <script src="sketch.js"></script>
+
+</body>
 </html>
