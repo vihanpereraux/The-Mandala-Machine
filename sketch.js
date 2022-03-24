@@ -71,10 +71,8 @@ function draw() {
 
 
 // Background clearence and key pressed triggers
-function keyPressed() {
+function generateArt() {
   clear();
   background(0)
-  if (keyCode === 13) {
-    redraw();
-  }
+  redraw();
 }
