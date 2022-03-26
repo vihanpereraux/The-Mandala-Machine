@@ -1,11 +1,14 @@
 let x1, x2, x3, x4, y2, y3
 var petals = localStorage.getItem('numOfPetals');
 
+
 function setup() {
   // canvas configurations
-  createCanvas(windowWidth, windowHeight);
-  background(0);
+  createCanvas(windowWidth, windowWidth);
+  background(100);
   noLoop();
+  // width - 1325px
+  // height - 650px
 }
 
 
@@ -21,14 +24,23 @@ function draw() {
   let ang = 360/petals ;
 
   // let removal = 40;
-  let removal = localStorage.getItem('removalAmount');
+  let removal = 40;
 
-  for (let i = 0; i < localStorage.getItem('numOfRounds'); i++) {
+  let maxX4 = (windowWidth/2);
+  let minX4 = (maxX4-50);
+  let maxX3 = (minX4);
+  let minX3 = (maxX3-50);
+  let maxxX2 = (minX3+15);
+  let minX2 = (maxxX2-15);
+  let maxX1 = (minX2)
+  let minX1 = (maxX1-10)
+
+  for (let i = 0; i < 14; i++) {
     
-    x4 = random(230-i*removal,250-i*removal);
-    x3 = random(210-i*removal,230-i*removal);
-    x2 = random(190-i*removal,215-i*removal);
-    x1 = random(185-i*removal,205-i*removal);
+    x4 = random( minX4 - (i*removal), maxX4 - (i*removal) );
+    x3 = random( minX3 - (i*removal), maxX3 - (i*removal) );
+    x2 = random( minX2 - (i*removal), maxxX2 - (i*removal) );
+    x1 = random(minX1-i*removal,maxX1-i*removal);
     let maxX2 = x2*tan(ang*0.5);
     y2 = random(5, maxX2); // preventing overlapping
     y3 = random(5, maxX2); // // preventing overlapping
@@ -37,7 +49,7 @@ function draw() {
     let sat = random(70, 100);
     let brgt = random(70, 100);
 
-    for (let i = 0; i < localStorage.getItem('numOfPetals'); i++) {
+    for (let i = 0; i < 70; i++) {
       
       fill(hue, sat, brgt);
       stroke(0,0,0);
@@ -77,3 +89,4 @@ function generateArt() {
   background(0)
   redraw();
 }
+
