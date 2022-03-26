@@ -21,7 +21,7 @@ function draw() {
   translate(width/2, height/2);
   //circle(0,0,50);
 
-  let ang = 360/petals ;
+  let ang = 360/petals; // *0.0 -> 2.0
 
   // let removal = 40;
   let removal = 40;
@@ -36,7 +36,6 @@ function draw() {
   let minX1 = (maxX1-10)
 
   for (let i = 0; i < 14; i++) {
-    
     x4 = random( minX4 - (i*removal), maxX4 - (i*removal) );
     x3 = random( minX3 - (i*removal), maxX3 - (i*removal) );
     x2 = random( minX2 - (i*removal), maxxX2 - (i*removal) );
@@ -50,7 +49,6 @@ function draw() {
     let brgt = random(70, 100);
 
     for (let i = 0; i < 70; i++) {
-      
       fill(hue, sat, brgt);
       stroke(0,0,0);
       beginShape();
