@@ -28,7 +28,7 @@ function draw() {
 
   let maxX4 = (windowWidth/2);
   let minX4 = (maxX4-50);
-  let maxX3 = (minX4);
+  let maxX3 = (minX4-10);
   let minX3 = (maxX3-50);
   let maxxX2 = (minX3+15);
   let minX2 = (maxxX2-15);
